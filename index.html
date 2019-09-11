@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Soccer Teams</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  </head>
+  <body>
+    <div id="background-div">
+     <p></p>
+    </div>
+
+
+
+
+
+
+
+
+ <div id=full-body-div>
+    <div id="create-team-div">
+      <h3>Create a Soccer Team</h3>
+      <div class="ui mini form">
+          <form id="create-team-form" class="ui equal width form">
+            <div class="fields">
+              <div class="field">
+              <label>Team Name</label>
+              <input placeholder="Team Name" type="text">
+              </div>
+              <div class="field">
+              <label>Goalkeeper</label>
+              <select id="goalkeeper-dropdown" class="position ui search selection dropdown">
+              </select>
+              </div>
+              <div class="field">
+                <label>Left Back</label>
+                <select id="lb-dropdown" class="position ui search selection dropdown">
+                </select>
+              </div>
+              <div class="field">
+                <label>Left Center Back</label>
+                <select id="lcb-dropdown" class="position ui search selection dropdown">
+                </select>
+              </div> 
+              <div class="field">
+                <label>Right Center Back</label>
+                <select id="rcb-dropdown" class="position ui search selection dropdown">
+                </select>
+              </div>  
+              <div class="field">
+                <label>Right Back</label>
+                <select id="rb-dropdown" class="position ui search selection dropdown">
+                </select>
+              </div>  
+            </div>
+            <div class="fields">
+              <div class="field">
+                <label>Center Defensive Mid</label>
+                <select id="cdm-dropdown" class="position ui search selection dropdown">
+                </select>
+              </div>      
+              <div class="field">
+                <label>Left Attacking Mid</label>
+                <select id="lam-dropdown" class="position ui search selection dropdown">
+                </select>
+              </div>
+              <div class="field">
+                <label>Right Attacking Mid</label>
+                <select id="ram-dropdown" class="position ui search selection dropdown">
+                </select>
+              </div>   
+              <div class="field">
+                <label>Left Winger</label>
+                <select id="lw-dropdown" class="position ui search selection dropdown">
+                </select>
+              </div>   
+              <div class="field">
+                <label>Striker</label>
+                <select id="st-dropdown" class="position ui search selection dropdown">
+                </select>
+              </div>     
+              <div class="field">
+                <label>Right Winger</label>
+                <select id="rw-dropdown" class="position ui search selection dropdown">
+                </select>
+              </div>
+            </div>
+            <div id="create-team-button" class="ui submit button">Submit</div>
+        </form>
+      </div>
+    </div>
+
+    <!-- <div id="create-player-div">
+        <h3>Create a Player</h3>
+          <div class="ui tiny equal width form">
+                <div class="five fields">
+                
+                  <div class="field">
+                    <input placeholder="Name" type="text">
+                  </div>
+                
+                  <div class="field">
+                    <input placeholder="Position" type="text">
+                  </div>
+                
+                  <div class="field">
+                    <input placeholder="Team" type="text">
+                  </div>
+                
+                  <div class="field">
+                    <input placeholder="Fifa Rating" type="text">
+                  </div>
+                  <div class="field">
+                      <input placeholder="Club" type="text">
+                    </div> 
+                
+                <div class="ui green submit button">Submit</div>
+              </div>
+          </div>
+
+    </div> -->
+    <div id="show-team-header">
+      <h2>Show all of the teams</h2>
+    </div>
+
+  <div id="all-teams-div">
+
+    <div class="show-team-div">
+
+
+
+
+
+
+
+
+      <div class="striker-area">
+        <div class="striker">1</div>
+      </div>
+      <div class = "winger-area">
+        <div class = "left-winger">2</div>
+        <div class = "right-winger">3</div>
+      </div>
+      <div class = "cam-area">
+        <div class = "left-cam">4</div>
+        <div class = "right-cam">5</div>
+      </div>
+      <div class = "cdm-area">
+        <div class = "cdm">6</div>
+      </div>
+      <div class = "def-area">
+        <div class = "left-back">7</div>
+        <div class = "left-center-back">8</div>
+        <div class = "right-center-back">9</div>
+        <div class = "right-back">10</div>
+      </div>
+      <div class = "goalkeeper-area">
+        <div class = "goalkeeper">11</div>
+      </div>
+      <div class = team-buttons-div>
+        <div class="delete-team-button-div">
+          <button data-id="" class = "ui red button delete-team-button">Delete</button>
+        </div>
+        <div class="edit-team-button-div">
+          <button id="test" data-id="" class="ui blue button edit-team-button">Edit</button>
+          
+          
+          
+          
+          <div class="modal">
+              <div id="modal-content"class="modal-content">
+                  <!-- <span class="close-button">&times;</span>
+                  <div id="edit-team-div">
+                      <h3>Edit Team</h3>
+                      <div class="ui mini form">
+                          <form id="edit-team-form" class="ui equal width form">
+                            <div class="fields">
+                              <div class="field">
+                              <label>Team Name</label>
+                              <input placeholder="Team Name" type="text" value="">
+                              </div>
+                              <div class="field">
+                              <label>Goalkeeper</label>
+                              <select id="modal-goalkeeper-dropdown" class="position ui search selection dropdown">
+                              </select>
+                              </div>
+                              <div class="field">
+                                <label>Left Back</label>
+                                <select id="modal-lb-dropdown" class="position ui search selection dropdown">
+                                </select>
+                              </div>
+                              <div class="field">
+                                <label>Left Center Back</label>
+                                <select id="modal-lcb-dropdown" class="position ui search selection dropdown">
+                                </select>
+                              </div> 
+                              <div class="field">
+                                <label>Right Center Back</label>
+                                <select id="modal-rcb-dropdown" class="position ui search selection dropdown">
+                                </select>
+                              </div>  
+                              <div class="field">
+                                <label>Right Back</label>
+                                <select id="modal-rb-dropdown" class="position ui search selection dropdown">
+                                </select>
+                              </div>  
+                            </div>
+                            <div class="fields">
+                              <div class="field">
+                                <label>Center Defensive Mid</label>
+                                <select id="modal-cdm-dropdown" class="position ui search selection dropdown">
+                                </select>
+                              </div>      
+                              <div class="field">
+                                <label>Left Attacking Mid</label>
+                                <select id="modal-lam-dropdown" class="position ui search selection dropdown">
+                                </select>
+                              </div>
+                              <div class="field">
+                                <label>Right Attacking Mid</label>
+                                <select id="modal-ram-dropdown" class="position ui search selection dropdown">
+                                </select>
+                              </div>   
+                              <div class="field">
+                                <label>Left Winger</label>
+                                <select id="modal-lw-dropdown" class="position ui search selection dropdown">
+                                </select>
+                              </div>   
+                              <div class="field">
+                                <label>Striker</label>
+                                <select id="modal-st-dropdown" class="position ui search selection dropdown">
+                                </select>
+                              </div>     
+                              <div class="field">
+                                <label>Right Winger</label>
+                                <select id="modal-rw-dropdown" class="position ui search selection dropdown">
+                                </select>
+                              </div>
+                            </div>
+                            <div id="edit-team-button" class="ui submit button">Edit</div>
+                        </form>
+                      </div>
+                    </div> -->
+              </div>
+          </div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+    <div id="show-players-header">
+      <h2>Show the players</h2>
+    </div>
+      <div id="show-players-div"></div>
+      <ul id="show-players-list">
+
+      </ul>
+    </div>
+</div>
+
+
+
+
+
+    <script src="./src/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,347 @@
+/* body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #4caf50;
+    margin: 0 auto;
+    height: 50px;
+  }
+  
+  header h2 {
+    padding: 10px;
+    margin: 0;
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+  
+  div.card {
+    background-color: #eeeeee;
+    height: 250px;
+    width: 300px;
+    box-shadow: 10px 10px grey;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  p {
+    font-size: 1.5em;
+    color: black;
+    font-family: Helvetica;
+  }
+  
+  li {
+    font-size: 1.05em;
+    list-style: none;
+    padding-right: 20px;
+  }
+  
+  button {
+    font-size: .65em;
+    color: #fff;
+    background-color: green;
+    border-radius: 10px;
+  }
+  
+  button.release {
+    float: right;
+    background-color: #E1332D;
+  }
+  
+  @media only screen and (min-width: 500px) {
+    main {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media only screen and (min-width: 850px) {
+    main {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  } */
+  
+
+/* #body-div {
+  height: 100%;
+  background-color: red;
+} */
+
+
+#background-div{
+  align-content: center; 
+  position: fixed; 
+  height: 100%;
+  width: 100%;
+  background-image: url('https://www.biography.com/.image/t_share/MTQ4MDU5NDU0MzgwNzEzNDk0/lionel_messi_photo_josep_lago_afp_getty_images_664928892_resizedjpg.jpg'); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.5;
+  z-index: -1;  
+}
+
+#full-body-div {
+  align-content: center; 
+  position: relative; 
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+}
+
+#create-team-div{
+  text-align: center;
+  border-bottom-width: 0em;
+  border-bottom-color: black;
+  border-bottom:solid;
+  height: 32%;
+  padding-top: 1%;
+  width: 100%;
+  display: inline-block;
+}
+
+#create-player-div{
+  text-align: center;
+  border-bottom-width: 0em;
+  border-bottom-color: black;
+  border-bottom:solid;
+  height: 15%;
+  width: 100%;
+  display: inline-block;
+}
+
+#show-team-header{
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  display: inline-block;
+}
+
+
+#all-teams-div {
+  display: grid; 
+  grid-template-columns: 23% 25% 25% 25%;
+  /* grid-template-rows: 20% 20% 20% 20% 20%; */
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.show-team-div{
+  display: flex;
+  flex-direction: column;
+  background-color: #eeeeee;
+  height: 400px;
+  width: 300px;
+  box-shadow: 10px 10px grey;
+  padding: 5px;
+  padding-top: 10px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.delete-team-button-div{
+    float:left;
+}
+
+.edit-team-button-div{
+    float:right;
+}
+
+.ui.blue.button.edit-team-button{
+  padding: 5px 30px;
+}
+
+.ui.red.button.delete-team-button{
+  padding: 5px 21px;
+}
+
+/* #needs-to-change{
+  font-size:30px;
+} */
+
+.striker-area {
+  height: 16.5%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+.striker {
+  font-size: 12px;
+}
+.winger-area {
+  height: 16.5%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+.left-winger {
+  width:50%;
+  text-align:left;
+  font-size: 12px;
+}
+.right-winger {
+  width:50%;
+  text-align:right;
+  font-size: 12px;
+}
+.cam-area {
+  height: 16.5%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+.left-cam {
+  width:50%;
+  text-align:center;
+  font-size: 12px;
+}
+.right-cam {
+  width:50%;
+  text-align:center;
+  font-size: 12px;
+}
+.cdm-area {
+  height: 16.5%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+.cdm{
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+}
+.def-area {
+  height: 16.5%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  padding-top: 2%
+}
+.left-back{
+  width:25%;
+  text-align:left;
+  font-size: 12px;
+  padding-bottom:10%;
+}
+.left-center-back{
+  width:25%;
+  text-align:center;
+  font-size: 12px;
+  padding-top: 4%;
+}
+.right-center-back{
+  width:25%;
+  text-align:center;
+  font-size: 12px;
+  padding-top: 4%;
+}
+.right-back{
+  width:25%;
+  text-align:right;
+  font-size: 12px;
+  padding-bottom:10%;
+}
+
+.goalkeeper-area {
+  height: 16.5%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+
+.goalkeeper {
+  text-align: center;
+  font-size: 12px;
+  padding-top: 8%
+}
+#show-players-header{
+  text-align:center;
+  font-size: 12px;
+}
+
+#show-players-div{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  display: inline-block;
+}
+
+#show-players-list {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    text-align: center;
+    list-style-position: inside;
+}
+
+#show-player {
+  /* list-style-type: none; */
+}
+
+div.card {
+  background-color: #eeeeee;
+  height: 300px;
+  width: 300px;
+  box-shadow: 10px 10px grey;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center
+}
+
+
+
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.modal-content {
+  position: absolute;
+   top: 30%;
+  /* left: 10%;  */
+  /* transform: translate(-50%, -50%); */
+  background-color: white;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+.close-button {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgray;
+}
+.close-button:hover {
+  background-color: darkgray;
+}
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
