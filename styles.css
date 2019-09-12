@@ -80,7 +80,7 @@
   position: fixed; 
   height: 100%;
   width: 100%;
-  background-image: url('https://www.biography.com/.image/t_share/MTQ4MDU5NDU0MzgwNzEzNDk0/lionel_messi_photo_josep_lago_afp_getty_images_664928892_resizedjpg.jpg'); 
+  background-image: url('https://i.pinimg.com/originals/8c/1f/af/8c1faf344f2182f815545d5e19d3bedd.jpg'); 
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -133,10 +133,12 @@
   padding: 20px;
 }
 
+
 .show-team-div{
   display: flex;
   flex-direction: column;
-  background-color: #eeeeee;
+  background-image: url('data:image/png;base64,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'); 
+  background-size: 300px 400px;
   height: 400px;
   width: 300px;
   box-shadow: 10px 10px grey;
@@ -145,6 +147,8 @@
   margin: 20px;
   border-radius: 10px;
 }
+
+
 
 .delete-team-button-div{
     float:left;
@@ -162,9 +166,16 @@
   padding: 5px 21px;
 }
 
-/* #needs-to-change{
-  font-size:30px;
-} */
+.team-name-area{
+  height: 16%;
+  font-size: 2rem;
+  align-content: center;
+  justify-content: center;
+}
+
+.team-name{
+  text-align: center;
+}
 
 .striker-area {
   height: 16.5%;
@@ -172,9 +183,12 @@
   flex-direction: row;
   align-content: center;
   justify-content: center;
+  
 }
 .striker {
   font-size: 12px;
+  font-weight: bold;
+  align-self: flex-end;
 }
 .winger-area {
   height: 16.5%;
@@ -187,11 +201,13 @@
   width:50%;
   text-align:left;
   font-size: 12px;
+  font-weight: bold;
 }
 .right-winger {
   width:50%;
   text-align:right;
   font-size: 12px;
+  font-weight: bold;
 }
 .cam-area {
   height: 16.5%;
@@ -204,11 +220,13 @@
   width:50%;
   text-align:center;
   font-size: 12px;
+  font-weight: bold;
 }
 .right-cam {
   width:50%;
   text-align:center;
   font-size: 12px;
+  font-weight: bold;
 }
 .cdm-area {
   height: 16.5%;
@@ -221,6 +239,7 @@
   width: 100%;
   text-align: center;
   font-size: 12px;
+  font-weight: bold;
 }
 .def-area {
   height: 16.5%;
@@ -235,24 +254,28 @@
   text-align:left;
   font-size: 12px;
   padding-bottom:10%;
+  font-weight: bold;
 }
 .left-center-back{
   width:25%;
   text-align:center;
   font-size: 12px;
   padding-top: 4%;
+  font-weight: bold;
 }
 .right-center-back{
   width:25%;
   text-align:center;
   font-size: 12px;
   padding-top: 4%;
+  font-weight: bold;
 }
 .right-back{
   width:25%;
   text-align:right;
   font-size: 12px;
   padding-bottom:10%;
+  font-weight: bold;
 }
 
 .goalkeeper-area {
@@ -266,7 +289,8 @@
 .goalkeeper {
   text-align: center;
   font-size: 12px;
-  padding-top: 8%
+  padding-top: 8%;
+  font-weight: bold;
 }
 #show-players-header{
   text-align:center;

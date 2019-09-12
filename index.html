@@ -86,7 +86,7 @@
                 </select>
               </div>
             </div>
-            <div id="create-team-button" class="ui submit button">Submit</div>
+            <div id="create-team-button" class="ui green submit button">Submit</div>
         </form>
       </div>
     </div>
@@ -126,15 +126,11 @@
 
   <div id="all-teams-div">
 
-    <div class="show-team-div">
+    <div class="show-team-div"> 
 
-
-
-
-
-
-
-
+      <div class="team-name-area">
+          <div class="team-name">Team  Name</div>
+      </div>
       <div class="striker-area">
         <div class="striker">1</div>
       </div>
@@ -158,103 +154,96 @@
       <div class = "goalkeeper-area">
         <div class = "goalkeeper">11</div>
       </div>
+
       <div class = team-buttons-div>
         <div class="delete-team-button-div">
           <button data-id="" class = "ui red button delete-team-button">Delete</button>
         </div>
         <div class="edit-team-button-div">
           <button id="test" data-id="" class="ui blue button edit-team-button">Edit</button>
-          
-          
-          
-          
-          <div class="modal">
-              <div id="modal-content"class="modal-content">
-                  <!-- <span class="close-button">&times;</span>
-                  <div id="edit-team-div">
-                      <h3>Edit Team</h3>
-                      <div class="ui mini form">
-                          <form id="edit-team-form" class="ui equal width form">
-                            <div class="fields">
-                              <div class="field">
-                              <label>Team Name</label>
-                              <input placeholder="Team Name" type="text" value="">
-                              </div>
-                              <div class="field">
-                              <label>Goalkeeper</label>
-                              <select id="modal-goalkeeper-dropdown" class="position ui search selection dropdown">
-                              </select>
-                              </div>
-                              <div class="field">
-                                <label>Left Back</label>
-                                <select id="modal-lb-dropdown" class="position ui search selection dropdown">
-                                </select>
-                              </div>
-                              <div class="field">
-                                <label>Left Center Back</label>
-                                <select id="modal-lcb-dropdown" class="position ui search selection dropdown">
-                                </select>
-                              </div> 
-                              <div class="field">
-                                <label>Right Center Back</label>
-                                <select id="modal-rcb-dropdown" class="position ui search selection dropdown">
-                                </select>
-                              </div>  
-                              <div class="field">
-                                <label>Right Back</label>
-                                <select id="modal-rb-dropdown" class="position ui search selection dropdown">
-                                </select>
-                              </div>  
-                            </div>
-                            <div class="fields">
-                              <div class="field">
-                                <label>Center Defensive Mid</label>
-                                <select id="modal-cdm-dropdown" class="position ui search selection dropdown">
-                                </select>
-                              </div>      
-                              <div class="field">
-                                <label>Left Attacking Mid</label>
-                                <select id="modal-lam-dropdown" class="position ui search selection dropdown">
-                                </select>
-                              </div>
-                              <div class="field">
-                                <label>Right Attacking Mid</label>
-                                <select id="modal-ram-dropdown" class="position ui search selection dropdown">
-                                </select>
-                              </div>   
-                              <div class="field">
-                                <label>Left Winger</label>
-                                <select id="modal-lw-dropdown" class="position ui search selection dropdown">
-                                </select>
-                              </div>   
-                              <div class="field">
-                                <label>Striker</label>
-                                <select id="modal-st-dropdown" class="position ui search selection dropdown">
-                                </select>
-                              </div>     
-                              <div class="field">
-                                <label>Right Winger</label>
-                                <select id="modal-rw-dropdown" class="position ui search selection dropdown">
-                                </select>
-                              </div>
-                            </div>
-                            <div id="edit-team-button" class="ui submit button">Edit</div>
-                        </form>
-                      </div>
-                    </div> -->
-              </div>
-          </div>
-
-
-
 
         </div>
       </div>
-    </div>
-
-
+    </div> 
   </div>
 
+
+  <div class="modal">
+      <div id="modal-content"class="modal-content">
+           <span class="close-button">&times;</span>
+          <div id="edit-team-div">
+              <h3>Edit Team</h3>
+              <div class="ui mini form">
+                  <form id="edit-team-form" class="ui equal width form">
+                    <div class="fields">
+                      <div class="field">
+                      <label>Team Name</label>
+                      <input placeholder="Team Name" type="text" value="">
+                      </div>
+                      <div class="field">
+                      <label>Goalkeeper</label>
+                      <select id="modal-goalkeeper-dropdown" class="position ui search selection dropdown">
+                      </select>
+                      </div>
+                      <div class="field">
+                        <label>Left Back</label>
+                        <select id="modal-lb-dropdown" class="position ui search selection dropdown">
+                        </select>
+                      </div>
+                      <div class="field">
+                        <label>Left Center Back</label>
+                        <select id="modal-lcb-dropdown" class="position ui search selection dropdown">
+                        </select>
+                      </div> 
+                      <div class="field">
+                        <label>Right Center Back</label>
+                        <select id="modal-rcb-dropdown" class="position ui search selection dropdown">
+                        </select>
+                      </div>  
+                      <div class="field">
+                        <label>Right Back</label>
+                        <select id="modal-rb-dropdown" class="position ui search selection dropdown">
+                        </select>
+                      </div>  
+                    </div>
+                    <div class="fields">
+                      <div class="field">
+                        <label>Center Defensive Mid</label>
+                        <select id="modal-cdm-dropdown" class="position ui search selection dropdown">
+                        </select>
+                      </div>      
+                      <div class="field">
+                        <label>Left Attacking Mid</label>
+                        <select id="modal-lam-dropdown" class="position ui search selection dropdown">
+                        </select>
+                      </div>
+                      <div class="field">
+                        <label>Right Attacking Mid</label>
+                        <select id="modal-ram-dropdown" class="position ui search selection dropdown">
+                        </select>
+                      </div>   
+                      <div class="field">
+                        <label>Left Winger</label>
+                        <select id="modal-lw-dropdown" class="position ui search selection dropdown">
+                        </select>
+                      </div>   
+                      <div class="field">
+                        <label>Striker</label>
+                        <select id="modal-st-dropdown" class="position ui search selection dropdown">
+                        </select>
+                      </div>     
+                      <div class="field">
+                        <label>Right Winger</label>
+                        <select id="modal-rw-dropdown" class="position ui search selection dropdown">
+                        </select>
+                      </div>
+                    </div>
+                    <div id="edit-team-button" class="ui submit button">Edit</div>
+                </form>
+              </div>
+            </div> 
+      </div>
+  </div>
     <div id="show-players-header">
       <h2>Show the players</h2>
     </div>

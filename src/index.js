@@ -17,12 +17,6 @@ function main() {
     })
 }
 
-
-
-
-
-
-
 function editTeam() {
     function windowOnClick(event) {
         if (event.target === modal) {
@@ -34,7 +28,6 @@ function editTeam() {
             let teamButton = e.target
             let teamID = e.target.dataset.id
             const modalContent = document.getElementById("modal-content")
-            // console.log(allPlayers)
             modalContent.innerHTML = `<span class="close-button">&times;</span>
             <div id="edit-team-div">
                 <h3>Edit Team</h3>
@@ -126,7 +119,6 @@ function editTeam() {
             toggleModal();
         }
     })
-
     function editTeamRequest(teamID, teamButton){
         const editTeamForm = document.getElementById("edit-team-form")
         const formData = {
@@ -141,65 +133,88 @@ function editTeam() {
         fetch(`${TEAMS_URL}/${teamID}`, reqObj)
         .then(res=>res.json())
         .then(team =>{
-            teamButton.parentNode.parentNode.parentNode.innerHTML = ` 
-            <div class="striker-area">
-              <div class="striker">${team.players[0].name}</div>
-            </div>
-            <div class = "winger-area">
-              <div class = "left-winger">${team.players[1].name}</div>
-              <div class = "right-winger">${team.players[2].name}</div>
-            </div>
-            <div class = "cam-area">
-              <div class = "left-cam">${team.players[3].name}</div>
-              <div class = "right-cam">${team.players[4].name}</div>
-            </div>
-            <div class = "cdm-area">
-              <div class = "cdm">${team.players[5].name}</div>
-            </div>
-            <div class = "def-area">
-              <div class = "left-back">${team.players[6].name}</div>
-              <div class = "left-center-back">${team.players[7].name}</div>
-              <div class = "right-center-back">${team.players[8].name}</div>
-              <div class = "right-back">${team.players[9].name}</div>
-            </div>
-            <div class = "goalkeeper-area">
-              <div class = "goalkeeper">${team.players[10].name}</div>
-            </div>
-            <div class = team-buttons-div>
-                <div class="delete-team-button-div">
-                  <button data-id="${team.id}" class = "ui red button delete-team-button">Delete</button>
-                </div>
-                <div class="edit-team-button-div">
-                  <button data-id="${team.id}" class="ui blue button edit-team-button">Edit</button>
-                </div>
-              </div>`
+
+            insertFieldHtml(teamButton.parentNode.parentNode.parentNode, team)
+            // teamButton.parentNode.parentNode.parentNode.innerHTML = ` 
+            // <div class="striker-area">
+            //   <div class="striker">${team.players[0].name}</div>
+            // </div>
+            // <div class = "winger-area">
+            //   <div class = "left-winger">${team.players[1].name}</div>
+            //   <div class = "right-winger">${team.players[2].name}</div>
+            // </div>
+            // <div class = "cam-area">
+            //   <div class = "left-cam">${team.players[3].name}</div>
+            //   <div class = "right-cam">${team.players[4].name}</div>
+            // </div>
+            // <div class = "cdm-area">
+            //   <div class = "cdm">${team.players[5].name}</div>
+            // </div>
+            // <div class = "def-area">
+            //   <div class = "left-back">${team.players[6].name}</div>
+            //   <div class = "left-center-back">${team.players[7].name}</div>
+            //   <div class = "right-center-back">${team.players[8].name}</div>
+            //   <div class = "right-back">${team.players[9].name}</div>
+            // </div>
+            // <div class = "goalkeeper-area">
+            //   <div class = "goalkeeper">${team.players[10].name}</div>
+            // </div>
+            // <div class = team-buttons-div>
+            //     <div class="delete-team-button-div">
+            //       <button data-id="${team.id}" class = "ui red button delete-team-button">Delete</button>
+            //     </div>
+            //     <div class="edit-team-button-div">
+            //       <button data-id="${team.id}" class="ui blue button edit-team-button">Edit</button>
+            //     </div>
+            //   </div>`
               toggleModal();
         })
     }
-
-
-    
-  
     window.addEventListener("click", windowOnClick);
-
-    // x- find edit button
-    // x- if pressed, get model to pop up
-    // put form into modal
-    // when form is submitted, send Patch to API
-    //then edit team on screen without refresh
+    // x - find edit button
+    // x - if pressed, get model to pop up
+    // x - put form into modal
+    // x - when form is submitted, send Patch to API
+    // x - then edit team on screen without refresh
 }
 
-
-
-
-
-
-
-
-
-
-
-
+function insertFieldHtml(field, team){
+    field.innerHTML=` 
+    <div class="team-name-area">
+          <div class="team-name">${team.name}</div>
+      </div>
+    <div class="striker-area">
+      <div class="striker">${team.players[0].name}</div>
+    </div>
+    <div class = "winger-area">
+      <div class = "left-winger">${team.players[1].name}</div>
+      <div class = "right-winger">${team.players[2].name}</div>
+    </div>
+    <div class = "cam-area">
+      <div class = "left-cam">${team.players[3].name}</div>
+      <div class = "right-cam">${team.players[4].name}</div>
+    </div>
+    <div class = "cdm-area">
+      <div class = "cdm">${team.players[5].name}</div>
+    </div>
+    <div class = "def-area">
+      <div class = "left-back">${team.players[6].name}</div>
+      <div class = "left-center-back">${team.players[7].name}</div>
+      <div class = "right-center-back">${team.players[8].name}</div>
+      <div class = "right-back">${team.players[9].name}</div>
+    </div>
+    <div class = "goalkeeper-area">
+      <div class = "goalkeeper">${team.players[10].name}</div>
+    </div>
+    <div class = team-buttons-div>
+        <div class="delete-team-button-div">
+          <button data-id="${team.id}" class = "ui red button delete-team-button">Delete</button>
+        </div>
+        <div class="edit-team-button-div">
+          <button data-id="${team.id}" class="ui blue button edit-team-button">Edit</button>
+        </div>
+      </div>`
+}
 
 function deleteTeam() {
     document.addEventListener("click", (e) => {
@@ -256,52 +271,24 @@ function createIndividualPitch(team) {
     const newPitch = document.createElement("div")
     const allTeams = document.getElementById("all-teams-div")
     newPitch.className = "show-team-div"
-    newPitch.innerHTML=` 
-    <div class="striker-area">
-      <div class="striker">${team.players[0].name}</div>
-    </div>
-    <div class = "winger-area">
-      <div class = "left-winger">${team.players[1].name}</div>
-      <div class = "right-winger">${team.players[2].name}</div>
-    </div>
-    <div class = "cam-area">
-      <div class = "left-cam">${team.players[3].name}</div>
-      <div class = "right-cam">${team.players[4].name}</div>
-    </div>
-    <div class = "cdm-area">
-      <div class = "cdm">${team.players[5].name}</div>
-    </div>
-    <div class = "def-area">
-      <div class = "left-back">${team.players[6].name}</div>
-      <div class = "left-center-back">${team.players[7].name}</div>
-      <div class = "right-center-back">${team.players[8].name}</div>
-      <div class = "right-back">${team.players[9].name}</div>
-    </div>
-    <div class = "goalkeeper-area">
-      <div class = "goalkeeper">${team.players[10].name}</div>
-    </div>
-    <div class = team-buttons-div>
-        <div class="delete-team-button-div">
-          <button data-id="${team.id}" class = "ui red button delete-team-button">Delete</button>
-        </div>
-        <div class="edit-team-button-div">
-          <button data-id="${team.id}" class="ui blue button edit-team-button">Edit</button>
-        </div>
-      </div>`
+    insertFieldHtml(newPitch, team)
     allTeams.append(newPitch)
 }
 
 function createTeam() {
     const createTeamButton = document.getElementById("create-team-button")
-    
     createTeamButton.addEventListener("click", (e) => {
         e.preventDefault
-        const formData = {
-            teamName: createTeamForm[0].value,
-            players: [createTeamForm[1].value,createTeamForm[2].value,createTeamForm[3].value,createTeamForm[4].value,createTeamForm[5].value,createTeamForm[6].value,createTeamForm[7].value,createTeamForm[8].value,createTeamForm[9].value,createTeamForm[10].value,createTeamForm[11].value]
+        if (createTeamForm[0].value){
+            const formData = {
+                teamName: createTeamForm[0].value,
+                players: [createTeamForm[1].value,createTeamForm[2].value,createTeamForm[3].value,createTeamForm[4].value,createTeamForm[5].value,createTeamForm[6].value,createTeamForm[7].value,createTeamForm[8].value,createTeamForm[9].value,createTeamForm[10].value,createTeamForm[11].value]
+            }
+            postTeam(formData)
+        } else {
+            alert("Not a valid team name!")
         }
-        postTeam(formData)
-
+       
 
         //upon click, create team in backend
         //append players to the created team
@@ -310,7 +297,6 @@ function createTeam() {
     })
 }
 function postTeam(formData) {
-
         reqObj = {
             method:"POST",
             headers:{"Content-Type":"application/json"},
@@ -319,6 +305,7 @@ function postTeam(formData) {
     fetch(TEAMS_URL, reqObj)
     .then(res => res.json())
     .then(team => {
+        console.log(team.id)
         createIndividualPitch(team)
         resetForm()
     })
@@ -329,7 +316,6 @@ function playerDropdowns() {
     .then(res => res.json())
     .then(players => {
         allPlayers = players
-        console.log(allPlayers)
         players.forEach(player => {
             addPlayerToDropdown(player)
         })
